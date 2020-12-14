@@ -1,0 +1,11 @@
+<div >
+    <!-- <p>movie-list works!</p> -->
+    <ul class="movie-list">
+        <li class="movie-card" *ngFor="let movie of result; let i = index">
+            <img class="movie-img"
+            [alt]="movie.id"
+            src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}"
+        />
+        </li>
+    </ul>    
+</div>
