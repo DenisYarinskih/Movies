@@ -10,7 +10,7 @@ import { EmployeeService } from '../employeeService';
 export class MovieListComponent implements OnInit {
 
   public result: IEmployee[] = [];
-  public baseImgUrl: string = 'http://image.tmdb.org/t/p/w342';
+  //public baseImgUrl: string = 'http://image.tmdb.org/t/p/w342';
 
   constructor(private _employeeService: EmployeeService) { }
 
