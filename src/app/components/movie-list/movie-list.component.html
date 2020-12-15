@@ -1,0 +1,11 @@
+<div >
+    <ul class="movie__list">
+        <li class="movie__card" *ngFor="let movie of listOfMovies; let i = index">
+            <img class="movie__img"
+            [alt]="movie.id"
+            [src]="getImageUrl(movie.poster_path)"                
+            >            
+        </li>
+    </ul>    
+</div>
+
