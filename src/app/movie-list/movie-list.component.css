@@ -1,4 +1,4 @@
-.movie-list{
+.movie__list{
     max-width: 80%;
     margin: 0 auto;
     padding: 0px;
@@ -7,17 +7,16 @@
     grid-template-columns: repeat(5, auto);
     grid-row-gap: 22px;
     list-style: none;
-    /* overflow-x: hidden; */
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.movie-img{
+.movie__img{
     box-shadow: 12px 12px 4px 1px rgba(123, 123, 128, 0.1);
     width: 220px;
     transition: transform 1s ease-out;
 }
     
-.movie-img:hover{
+.movie__img:hover{
     transform: scale(1.1);
 }

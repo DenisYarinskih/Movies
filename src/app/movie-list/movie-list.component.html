@@ -1,11 +1,11 @@
 <div >
-    <!-- <p>movie-list works!</p> -->
-    <ul class="movie-list">
-        <li class="movie-card" *ngFor="let movie of result; let i = index">
-            <img class="movie-img"
+    <ul class="movie__list">
+        <li class="movie__card" *ngFor="let movie of result; let i = index">
+            <img class="movie__img"
             [alt]="movie.id"
             src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}"
         />
+        <!--i tried to use variable for src to make it more dynamically. Unfortunately was not successfully-->
         </li>
     </ul>    
 </div>

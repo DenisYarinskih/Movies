@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  booleanValue: Boolean = false;
 
-  ngOnInit(): void {
+  //customText = "Dropdown button";
+  constructor(){}
+  ngOnInit() {}
+
+  valueClick(){
+    this.booleanValue = !this.booleanValue;
   }
 
 }
