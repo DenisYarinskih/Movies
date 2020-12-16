@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "movies"
+  "defaultProject": "movies",
+  "cli": {
+    "analytics": "d24afe77-5221-4e97-acf9-12ae959541c5"
+  }
 }
