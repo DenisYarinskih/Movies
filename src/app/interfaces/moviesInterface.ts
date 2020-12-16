@@ -3,9 +3,12 @@ export interface IMovieShort {
     poster_path: string
 }
 
-export interface IMoviesDTO {
+export interface IMoviesDTO {    
+    dates: IDates,
+    page: number,
     results: IMovie[],
-    dates: IDates
+    total_pages: number,
+    total_results: number
 }
 
 export interface IMovie {
@@ -26,6 +29,6 @@ export interface IMovie {
 }
 
 export interface IDates {
-    maximu: string,
+    maximum: string,
     minimum: string
 }

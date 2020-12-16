@@ -5,11 +5,4 @@ import { Component} from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
-
-  initialValue: Boolean = false;
-
-  handlerClick(){
-    this.initialValue = !this.initialValue;
-  }
-}
+export class HeaderComponent {}
