@@ -1,0 +1,23 @@
+.pagination__style {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+li{
+    cursor: pointer;
+    padding: 3% 7%;
+    border: 1px solid grey;
+}
+.some-class {
+    color: green;
+    background-color: #d6e0ca;
+}
+li:active {
+    background-color: grey;
+    transition: all 0.5s;
+}

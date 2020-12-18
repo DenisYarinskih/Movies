@@ -1,26 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IMoviesDTO, IMovieShort } from '../interfaces/moviesInterface';
+import { IMoviesDTO } from '../config/interfaces/iMovieDto';
 import { map } from 'rxjs/operators';
 
 @Injectable()
 export class MoviesDataService {
-
-  url: string = "http://api.themoviedb.org/3/movie/now_playing?api_key=ebea8cfca72fdff8d2624ad7bbf78e4c";
-
+  response: any;
   constructor(private http: HttpClient){}
 
-  getMoviesShort(): Observable<IMovieShort[]>{
-    return this.http.get<IMoviesDTO>(this.getUrl('now_playing')).pipe(
+  getMoviesShort(pageNumber: number): Observable<IMoviesDTO>{
+    return this.http.get<IMoviesDTO>(this.getUrl('now_playing', pageNumber)).pipe(
         map(movieDto =>  {
-          const results = movieDto.results;
-          return results.map(movie => ({id: movie.id, poster_path: movie.poster_path }))
+          this.response = movieDto;
+          return movieDto;
         })
     )
   }
 
-  private getUrl(targetPlace: string): string {
-      return `http://api.themoviedb.org/3/movie/${targetPlace}?api_key=ebea8cfca72fdff8d2624ad7bbf78e4c`
+  private getUrl(targetPlace: string, pageNumber: number): string {
+      return `http://api.themoviedb.org/3/movie/${targetPlace}?api_key=ebea8cfca72fdff8d2624ad7bbf78e4c&page=${pageNumber}`
     } 
 }

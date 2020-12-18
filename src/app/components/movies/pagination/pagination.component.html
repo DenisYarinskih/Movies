@@ -1,0 +1,12 @@
+<ul class="pagination__style">
+    <li (click)="changePage(typeButtonEnum.FIRST_PAGE)" *ngIf="true" >first</li>
+    <li (click)="changePage(typeButtonEnum.PREV_PAGE)" *ngIf="true">prev</li>
+    <li  *ngIf="pagination.page >= 2">...</li>
+    <li (click)="changePage(typeButtonEnum.PREV_PAGE)" *ngIf="pagination.page > 1">{{pagination.page - 1}}</li>
+    <li [ngClass]="{'some-class': someBooleanValue}">{{pagination.page}}</li>
+    <li (click)="changePage(typeButtonEnum.NEXT_PAGE)" *ngIf="pagination.page !== pagination.total_page" >{{pagination.page + 1}}</li>
+    <li  *ngIf="pagination.page !== pagination.total_page && pagination.page <= pagination.total_page - 2">...</li>
+    <li (click)="changePage(typeButtonEnum.NEXT_PAGE)" *ngIf="pagination.page !== pagination.total_page">next</li>
+    <li (click)="changePage(typeButtonEnum.LAST_PAGE)" *ngIf="pagination.page !== pagination.total_page">last</li>
+</ul>
+
