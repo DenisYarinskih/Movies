@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IMoviesDTO } from '../config/interfaces/iMovieDto';
+import { IMoviesDTO } from '../config/interfaces/iMovieDto.interface';
 
 @Injectable()
 export class MoviesDataService {

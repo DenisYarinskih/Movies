@@ -1,15 +1,15 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { TypeButtonEnum } from 'src/app/config/enum/enum';
-import { IPagination } from 'src/app/config/interfaces/iPagination';
+import { IPagination } from 'src/app/config/interfaces/pagination.interface';
 
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  styleUrls: ['./pagination.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class PaginationComponent {
-  someBooleanValue: Boolean = true;
   @Input() pagination: IPagination;
   @Output() newPage = new EventEmitter<number>();
 

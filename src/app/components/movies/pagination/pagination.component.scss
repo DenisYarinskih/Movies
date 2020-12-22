@@ -6,14 +6,14 @@
     margin-bottom: 25px;
     width: 300px;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;   
+    &-item {
+        cursor: pointer;
+        padding: 3% 7%;
+        border: 1px solid grey;
+    } 
 }
-li{
-    cursor: pointer;
-    padding: 3% 7%;
-    border: 1px solid grey;
-}
-.some-class {
+.current_page {
     color: green;
     background-color: #d6e0ca;
 }

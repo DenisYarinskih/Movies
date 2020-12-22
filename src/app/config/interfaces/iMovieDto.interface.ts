@@ -1,5 +1,5 @@
-import { IDates } from './iDates';
-import { IMovie } from './iMovie';
+import { IDates } from './dates.interface';
+import { IMovie } from './movie.interface';
 
 export interface IMoviesDTO {    
     dates: IDates,

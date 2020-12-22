@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MoviesDataService } from '../../services/MoviesDataService';
+import { MoviesDataService } from '../../services/movies-data.service';
 import { HeaderComponent } from '../../components/movies/header/header.component';
 import { MoviesInfoComponent } from '../../components/movies/movies-info/movies-info.component';
 import { MovieListComponent } from '../../components/movies/movie-list/movie-list.component';

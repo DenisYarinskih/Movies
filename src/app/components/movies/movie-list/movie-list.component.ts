@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IMoviesDTO } from '../../../config/interfaces/iMovieDto';
-import { MoviesDataService } from '../../../services/MoviesDataService';
+import { IMoviesDTO } from '../../../config/interfaces/iMovieDto.interface';
+import { MoviesDataService } from '../../../services/movies-data.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -18,12 +18,10 @@ export class MovieListComponent implements OnInit {
 
   loadMovies(pageNumber: number): void {
     this.employeeService.getMoviesShort(pageNumber)
-      .subscribe(moviesData => { 
-        this.moviesData = moviesData;
-      });
+      .subscribe(moviesData => this.moviesData = moviesData);
   }
 
-  getImageUrl(poster_path: string): string {
-    return `http://image.tmdb.org/t/p/w342${poster_path}`;              
+  getImageUrl(posterPath: string): string {
+    return `http://image.tmdb.org/t/p/w342${posterPath}`;              
   }     
 }
