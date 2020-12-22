@@ -10,7 +10,6 @@ import { IPagination } from 'src/app/config/interfaces/iPagination';
 
 export class PaginationComponent {
   someBooleanValue: Boolean = true;
-
   @Input() pagination: IPagination;
   @Output() newPage = new EventEmitter<number>();
 
@@ -22,10 +21,14 @@ export class PaginationComponent {
         this.newPage.emit(1);
         break;
       case TypeButtonEnum.PREV_PAGE:
-        this.newPage.emit(this.pagination.page - 1);
+        if(this.pagination.page !== 1){
+          this.newPage.emit(this.pagination.page - 1);
+        }
         break;
         case TypeButtonEnum.NEXT_PAGE:
-        this.newPage.emit(this.pagination.page + 1);
+          if(this.pagination.page !== this.pagination.total_page){
+            this.newPage.emit(this.pagination.page + 1);
+          }
         break;
       case TypeButtonEnum.LAST_PAGE:
         this.newPage.emit(this.pagination.total_page);

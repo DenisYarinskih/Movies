@@ -8,4 +8,4 @@
     </li>
 </ul>    
 
-<app-pagination [pagination]="{page: currentPage, total_page: moviesData.total_pages}" (newPage)="loadMovies($event)"></app-pagination>
+<app-pagination [pagination]="{page: moviesData.page, total_page: moviesData.total_pages}" (newPage)="loadMovies($event)"></app-pagination>

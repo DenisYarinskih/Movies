@@ -13,8 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     CommonModule,
     HttpClientModule,
-    AppRoutingModule,
-    
+    AppRoutingModule    
   ],
   bootstrap: [AppComponent], 
 })

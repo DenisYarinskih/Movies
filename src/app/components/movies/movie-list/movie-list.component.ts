@@ -8,20 +8,18 @@ import { MoviesDataService } from '../../../services/MoviesDataService';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit {
-  currentPage: number;
-  moviesData: IMoviesDTO = null;
+  moviesData: IMoviesDTO;
 
-  constructor(private _employeeService: MoviesDataService) { }
+  constructor(private employeeService: MoviesDataService) { }
 
   ngOnInit(): void {
     this.loadMovies(1);
   }
 
   loadMovies(pageNumber: number): void {
-    this._employeeService.getMoviesShort(pageNumber)
-      .subscribe((moviesData: IMoviesDTO) => { 
+    this.employeeService.getMoviesShort(pageNumber)
+      .subscribe(moviesData => { 
         this.moviesData = moviesData;
-        this.currentPage = moviesData.page;
       });
   }
 
