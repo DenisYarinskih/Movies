@@ -1,0 +1,11 @@
+<app-movies-info></app-movies-info>
+
+<ul class="movie__list">
+    <li  *ngFor="let movie of moviesData.results" class="movie__card">
+        <img class="movie__img"
+        alt="no picture"
+        [src]="getImageUrl(movie.poster_path)">            
+    </li>
+</ul>    
+
+<app-pagination [pagination]="{page: moviesData.page, total_page: moviesData.total_pages}" (newPage)="loadMovies($event)"></app-pagination>
