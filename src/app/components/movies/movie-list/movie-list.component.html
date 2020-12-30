@@ -3,9 +3,12 @@
 <ul class="movie__list">
     <li  *ngFor="let movie of moviesData.results" class="movie__card">
         <img class="movie__img"
+        title="Click for more information"
         alt="no picture"
-        [src]="getImageUrl(movie.poster_path)">            
+        [src]="getImageUrl(movie.poster_path)"
+        (click)="getInfo(movie.id)">            
     </li>
 </ul>    
 
 <app-pagination [pagination]="{page: moviesData.page, total_page: moviesData.total_pages}" (newPage)="loadMovies($event)"></app-pagination>
+

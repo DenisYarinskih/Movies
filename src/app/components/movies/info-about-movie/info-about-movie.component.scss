@@ -1,0 +1,40 @@
+.container {
+    margin-top: 25px;
+    position: relative;
+    height: 710px;
+    &__backImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        filter: blur(4px);
+    }
+    &__innerItems {
+        width: 55%;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+    }
+    &__innerItemRight {
+        width: 95%;
+        color: white;
+    }
+    &__frontImg {
+        width: 90%;
+        height: 100%;   
+        transition: transform 1s ease-out;
+    }
+    &__frontImg:hover {
+        transform: scale(1.05);
+    }
+}
+.rangeItems {
+    display: flex;
+}
+.description {
+    font-style: italic;;
+}
+.filmInfo {
+    font-size: 15px;
+}

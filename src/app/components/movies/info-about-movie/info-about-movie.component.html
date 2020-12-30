@@ -1,0 +1,21 @@
+<div *ngIf="filmInfo" class="container">   
+    <img [src]="getImageUrl(filmInfo.backdrop_path)"
+        alt="no picture" class="container__backImg">
+    <div class="container__innerItems">
+        <div class="container__innerItemLeft">
+            <img [src]="getImageUrl(filmInfo.poster_path)"
+                alt="no picture" class="container__frontImg">
+        </div>
+        <div class="container__innerItemRight">
+            <h2>{{filmInfo.title}} ({{releaseYear}})</h2>
+            <div class="rangeItems">
+                <pre class="filmInfo">Score: {{filmInfo.vote_average}} |</pre>
+                <pre class="filmInfo"> Popular: {{filmInfo.popularity}} |</pre>  
+                <pre class="filmInfo"> Date release: {{filmInfo.release_date}}</pre>                 
+            </div> 
+            <hr />                  
+                <p class="description">{{filmInfo.overview}}</p>  
+            <hr />          
+        </div> 
+    </div>    
+</div>

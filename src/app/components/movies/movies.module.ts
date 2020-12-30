@@ -7,14 +7,18 @@ import { MoviesRoutingModule } from './movies-routing.module';
 import { MoviesComponent } from './movies.component';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from './pagination/pagination.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { InfoAboutMovieComponent } from './info-about-movie/info-about-movie.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     MoviesInfoComponent,
     MovieListComponent,
-    MoviesComponent,
-    PaginationComponent
+    MoviesComponent,    
+    MovieDetailsComponent, 
+    PaginationComponent,
+    InfoAboutMovieComponent
   ],
   imports: [
     CommonModule,

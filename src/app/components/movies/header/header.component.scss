@@ -9,4 +9,10 @@
     z-index: 1;
     }
 } 
-
+.homeButton {
+    font-weight: bold;
+    color: white;
+}
+.homeButton:hover {
+    cursor: pointer;
+}
