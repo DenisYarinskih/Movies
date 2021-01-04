@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router){}
   
-  startPage(){
+  goToHomePage(): void{
     this.router.navigate(['movies'])
   }
 }
