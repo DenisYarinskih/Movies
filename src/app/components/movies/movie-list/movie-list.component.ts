@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { MovieHelper } from 'src/app/config/helpers/movie.helper';
 import { IMoviesDTO } from '../../../config/interfaces/iMovieDto.interface';
 import { MoviesDataService } from '../../../services/movies-data.service';
 
@@ -7,10 +9,12 @@ import { MoviesDataService } from '../../../services/movies-data.service';
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.scss']
 })
-export class MovieListComponent implements OnInit {
+export class MovieListComponent implements OnInit { 
+  @Output() newPage = new EventEmitter()
   moviesData: IMoviesDTO;
+  currentPage: string;
 
-  constructor(private employeeService: MoviesDataService) { }
+  constructor(private employeeService: MoviesDataService, private router: Router) { }
 
   ngOnInit(): void {
     this.loadMovies(1);
@@ -22,6 +26,10 @@ export class MovieListComponent implements OnInit {
   }
 
   getImageUrl(posterPath: string): string {
-    return `http://image.tmdb.org/t/p/w342${posterPath}`;              
-  }     
+    return MovieHelper.getImage(posterPath)
+  }
+    
+  goToMovieInfo(movieId: number): void{
+    this.router.navigate(['movies',movieId]) 
+  }
 }

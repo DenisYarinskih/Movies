@@ -7,19 +7,21 @@ import { MoviesRoutingModule } from './movies-routing.module';
 import { MoviesComponent } from './movies.component';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from './pagination/pagination.component';
+import { InfoAboutMovieComponent } from './info-about-movie/info-about-movie.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     MoviesInfoComponent,
     MovieListComponent,
-    MoviesComponent,
-    PaginationComponent
+    MoviesComponent,    
+    PaginationComponent,
+    InfoAboutMovieComponent
   ],
   imports: [
     CommonModule,
-    MoviesRoutingModule,
+    MoviesRoutingModule
   ],
-  providers: [MoviesDataService],
+  providers: [MoviesDataService]
 })
 export class MoviesModule {}

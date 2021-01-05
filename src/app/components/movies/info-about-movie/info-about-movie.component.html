@@ -1,0 +1,19 @@
+<div *ngIf="filmInfo" class="separate-info">   
+    <img [src]="getImageUrl(filmInfo.backdrop_path)"
+        alt="no picture" class="separate-info__background-image">
+    <div class="separate-info__container">
+        <div class="separate-info__container-image">
+            <img [src]="getImageUrl(filmInfo.poster_path)"
+                alt="no picture" class="separate-info__container-image-front">
+        </div>
+        <div class="separate-info__container-content">
+            <div class="separate-info__container-title"><span>{{filmInfo.title}} ({{releaseYear}})</span></div>
+            <div class="separate-info__container-items">
+                <pre>Score: {{filmInfo.vote_average}}  </pre>               
+                <pre> Popular: {{filmInfo.popularity}}  </pre>                
+                <pre> Date release: {{filmInfo.release_date}}</pre>                 
+            </div>                           
+            <p class="separate-info__container-description">{{filmInfo.overview}}</p>                      
+        </div> 
+    </div>    
+</div>
