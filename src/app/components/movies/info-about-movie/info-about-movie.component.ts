@@ -15,7 +15,7 @@ export class InfoAboutMovieComponent implements OnInit {
   filmInfo: IMovie;
   onDestroy$ = new Subject<void>();
 
-  constructor(private activatedRoute: ActivatedRoute, private movieDataService: MoviesDataService, private movieHelper: MovieHelper){}
+  constructor(private activatedRoute: ActivatedRoute, private movieDataService: MoviesDataService){}
   
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
@@ -29,8 +29,9 @@ export class InfoAboutMovieComponent implements OnInit {
     this.onDestroy$.complete();
   }
   getImageUrl(posterPath: string): string {
-    return this.movieHelper.getImage(posterPath)
+    return MovieHelper.getImage(posterPath)
   }
+  
   get releaseYear(): string {
     return this.filmInfo.release_date.split("-")[0];
   }

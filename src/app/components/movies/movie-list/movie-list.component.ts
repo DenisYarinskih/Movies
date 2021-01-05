@@ -10,11 +10,11 @@ import { MoviesDataService } from '../../../services/movies-data.service';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit { 
-  @Output() newPage: EventEmitter<IMoviesDTO> = new EventEmitter()
+  @Output() newPage = new EventEmitter()
   moviesData: IMoviesDTO;
   currentPage: string;
 
-  constructor(private employeeService: MoviesDataService, private router: Router, private movieHelper: MovieHelper) { }
+  constructor(private employeeService: MoviesDataService, private router: Router) { }
 
   ngOnInit(): void {
     this.loadMovies(1);
@@ -26,7 +26,7 @@ export class MovieListComponent implements OnInit {
   }
 
   getImageUrl(posterPath: string): string {
-    return this.movieHelper.getImage(posterPath)
+    return MovieHelper.getImage(posterPath)
   }
     
   goToMovieInfo(movieId: number): void{

@@ -8,7 +8,6 @@ import { MoviesComponent } from './movies.component';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from './pagination/pagination.component';
 import { InfoAboutMovieComponent } from './info-about-movie/info-about-movie.component';
-import { MovieHelper } from 'src/app/config/helpers/movie.helper';
 
 @NgModule({
   declarations: [
@@ -23,6 +22,6 @@ import { MovieHelper } from 'src/app/config/helpers/movie.helper';
     CommonModule,
     MoviesRoutingModule
   ],
-  providers: [MoviesDataService,MovieHelper]
+  providers: [MoviesDataService]
 })
 export class MoviesModule {}
