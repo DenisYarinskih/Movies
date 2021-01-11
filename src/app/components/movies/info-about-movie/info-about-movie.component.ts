@@ -19,15 +19,11 @@ export class InfoAboutMovieComponent implements OnInit {
   
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
-      switchMap(params => this.movieDataService.getMovieById(params.id)),
-        take(1),
-        takeUntil(this.onDestroy$)
+      switchMap(params => this.movieDataService.getMovieById(params.id))
+        
     ).subscribe(movie => this.filmInfo = movie)    
   }
-  ngOnDestroy(): void{
-    this.onDestroy$.next();
-    this.onDestroy$.complete();
-  }
+
   getImageUrl(posterPath: string): string {
     return MovieHelper.getImage(posterPath)
   }

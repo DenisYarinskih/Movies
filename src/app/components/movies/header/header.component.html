@@ -3,6 +3,38 @@
   <div  class="header__homePage" (click)="goToHomePage()" title="Home page">
     Movies
   </div> 
+  <nav class="header__nav nav">
+    <ul class="nav__list">
+      <li 
+        class="nav__item" 
+        (click)="goToHomePage()" 
+        [ngClass]="{'active' : bufferValue === categoriesDTO.NOW_PLAYING}"
+      >
+        {{categories.NOW_PLAYING}}
+      </li>
+      <li 
+        class="nav__item" 
+        (click)="goToMovieList(categoriesDTO.POPULAR)" 
+        [ngClass]="{'active' : bufferValue === categoriesDTO.POPULAR}"
+      >
+        {{categories.POPULAR}}
+      </li>
+      <li 
+        class="nav__item" 
+        (click)="goToMovieList(categoriesDTO.TOP_RATED)" 
+        [ngClass]="{'active' : bufferValue === categoriesDTO.TOP_RATED}"
+      >
+        {{categories.TOP_RATED}}
+      </li>
+      <li 
+        class="nav__item" 
+        (click)="goToMovieList(categoriesDTO.UPCOMING)" 
+        [ngClass]="{'active' : bufferValue === categoriesDTO.UPCOMING}"
+      >
+        {{categories.UPCOMING}}
+      </li>
+    </ul>
+  </nav>
 </header>
 
 

@@ -1,14 +1,14 @@
 .movie{
     &__list{        
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-row-gap: 22px;
+        justify-content: space-between;
         max-width: 80%;
         margin: 0 auto;
         padding: 0;
         color: black;
-        display: grid;
-        grid-template-columns: repeat(5, auto);
-        grid-row-gap: 22px;
-        list-style: none;
-        justify-content: space-between;
+        list-style: none;    
         margin-bottom: 30px;
         cursor: pointer;
     }
