@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { IMovie } from 'src/app/config/interfaces/movie.interface';
 import { MoviesDataService } from 'src/app/services/movies-data.service';
-import { switchMap, take, takeUntil } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { MovieHelper } from 'src/app/config/helpers/movie.helper';
 
 @Component({

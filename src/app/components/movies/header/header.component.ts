@@ -15,6 +15,12 @@ export class HeaderComponent implements OnInit{
   categories = CategoriesEnum;
   categoriesDTO = CategoriesDTOEnum;
   onDestroy$ = new Subject<void>();
+  categoriesList = [
+    {title: 'Now playing', value: 'now_playing'},
+    {title: 'Popular', value: 'popular'},
+    {title: 'Top rated', value: 'top_rated'},
+    {title: 'Upcoming', value: 'upcoming'}
+  ];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute){}
   
