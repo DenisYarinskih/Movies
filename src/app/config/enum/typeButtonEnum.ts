@@ -4,3 +4,6 @@ export enum TypeButtonEnum {
     NEXT_PAGE = 'Next page',
     LAST_PAGE = 'Last page'
 }
+
+
+

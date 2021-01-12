@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { TypeButtonEnum } from 'src/app/config/enum/enum';
+import { TypeButtonEnum } from 'src/app/config/enum/typeButtonEnum';
 import { IPagination } from 'src/app/config/interfaces/pagination.interface';
 
 @Component({

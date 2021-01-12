@@ -1,12 +1,62 @@
 <ul class="pagination__style">
-    <li *ngIf="pagination.page > 1" class="special_button pagination__style-item" (click)="changePage(typeButtonEnum.FIRST_PAGE)">first</li>
-    <li *ngIf="pagination.page > 1" class="special_button pagination__style-item" (click)="changePage(typeButtonEnum.PREV_PAGE)">prev</li>
-    <li *ngIf="pagination.page >= 2" class="pagination__style-item">...</li>
-    <li *ngIf="pagination.page > 1" (click)="changePage(typeButtonEnum.PREV_PAGE)" class="pagination__style-item">{{pagination.page - 1}}</li>
-    <li class="current_page pagination__style-item">{{pagination.page}}</li>
-    <li *ngIf="pagination.page !== pagination.total_page" (click)="changePage(typeButtonEnum.NEXT_PAGE)" class="pagination__style-item">{{pagination.page + 1}}</li>
-    <li *ngIf="pagination.page !== pagination.total_page && pagination.page <= pagination.total_page - 2" class="pagination__style-item">...</li>
-    <li *ngIf="pagination.page !== pagination.total_page" class="special_button pagination__style-item" (click)="changePage(typeButtonEnum.NEXT_PAGE)">next</li>
-    <li *ngIf="pagination.page !== pagination.total_page" class="special_button pagination__style-item" (click)="changePage(typeButtonEnum.LAST_PAGE)">last</li>
+    <li 
+        *ngIf="pagination.page > 1" 
+        class="special_button pagination__style-item" 
+        (click)="changePage(typeButtonEnum.FIRST_PAGE)"
+    >
+        first
+    </li>
+    <li 
+        *ngIf="pagination.page > 1" 
+        class="special_button pagination__style-item" 
+        (click)="changePage(typeButtonEnum.PREV_PAGE)"
+    >
+        prev
+    </li>
+    <li 
+        *ngIf="pagination.page >= 2" 
+        class="pagination__style-item"
+    >
+        ...
+    </li>
+    <li 
+        *ngIf="pagination.page > 1" 
+        (click)="changePage(typeButtonEnum.PREV_PAGE)" 
+        class="pagination__style-item"
+    >
+        {{pagination.page - 1}}
+    </li>
+    <li 
+        class="current_page pagination__style-item"
+    >
+        {{pagination.page}}
+    </li>
+    <li 
+        *ngIf="pagination.page !== pagination.total_page" 
+        (click)="changePage(typeButtonEnum.NEXT_PAGE)" 
+        class="pagination__style-item"
+    >
+        {{pagination.page + 1}}
+    </li>
+    <li 
+        *ngIf="pagination.page !== pagination.total_page && pagination.page <= pagination.total_page - 2" 
+        class="pagination__style-item"
+    >
+        ...
+    </li>
+    <li 
+        *ngIf="pagination.page !== pagination.total_page" 
+        class="special_button pagination__style-item" 
+        (click)="changePage(typeButtonEnum.NEXT_PAGE)"
+    >
+        next
+    </li>
+    <li 
+        *ngIf="pagination.page !== pagination.total_page" 
+        class="special_button pagination__style-item" 
+        (click)="changePage(typeButtonEnum.LAST_PAGE)"
+    >
+        last
+    </li>
 </ul>
 
