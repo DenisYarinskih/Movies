@@ -16,10 +16,10 @@ export class HeaderComponent implements OnInit{
   categoriesDTO = CategoriesDTOEnum;
   onDestroy$ = new Subject<void>();
   categoriesList = [
-    {title: 'Now playing', value: 'now_playing'},
-    {title: 'Popular', value: 'popular'},
-    {title: 'Top rated', value: 'top_rated'},
-    {title: 'Upcoming', value: 'upcoming'}
+    {title: CategoriesEnum.NOW_PLAYING, value: CategoriesDTOEnum.NOW_PLAYING},
+    {title: CategoriesEnum.POPULAR, value: CategoriesDTOEnum.POPULAR},
+    {title: CategoriesEnum.TOP_RATED, value: CategoriesDTOEnum.TOP_RATED},
+    {title: CategoriesEnum.UPCOMING, value: CategoriesDTOEnum.UPCOMING}
   ];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute){}
