@@ -24,6 +24,10 @@
     }
 } 
 .nav {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin-right: 50px;
     &__list {
         display: flex;
         justify-content: space-between;
@@ -31,7 +35,7 @@
         list-style: none;
         color: white;
         padding: 0;
-        margin: 0 150px 0 0; 
+        margin: 0 0px 0 0; 
         &-item {
             transition: text-shadow .3s;
             &:hover {
@@ -44,5 +48,18 @@
                 padding-bottom: 3px;
             }
         }     
+    }
+    &__favorite {
+        color: white;
+        transition: text-shadow .3s;
+            &:hover {
+                cursor: pointer;
+                color: black;
+                text-shadow: 0 0 .65px black, 0 0 .65px black;
+            }
+            &.active {
+                border-bottom: 2px solid white;
+                padding-bottom: 3px;
+            }
     }
 }

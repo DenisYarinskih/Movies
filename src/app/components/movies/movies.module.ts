@@ -8,6 +8,7 @@ import { MoviesComponent } from './movies.component';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from './pagination/pagination.component';
 import { InfoAboutMovieComponent } from './info-about-movie/info-about-movie.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InfoAboutMovieComponent } from './info-about-movie/info-about-movie.com
     MovieListComponent,
     MoviesComponent,    
     PaginationComponent,
-    InfoAboutMovieComponent
+    InfoAboutMovieComponent,
+    FavoritesComponent
   ],
   imports: [
     CommonModule,

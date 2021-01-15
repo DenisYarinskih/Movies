@@ -13,11 +13,12 @@
      <li 
            class="nav__list-item" 
            (click)="goToMovieList(category.value)" 
-           [ngClass]="{'active' : bufferValue === category.value}"
+           [ngClass]="{'active' : bufferValue === category.value && favoriteValue !== true}"
          >
            {{category.title}}
          </li>
    </ng-template>
+   <span class="nav__favorite" (click)="goToFavoriteMovies()" [ngClass]="{'active' : favoriteValue}">Favorite</span>
   </nav>
 </header>
 
