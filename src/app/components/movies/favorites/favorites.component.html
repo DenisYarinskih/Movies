@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="container__title">Favorites</h2>
+    <ul class="container__lists">
+        <li *ngFor="let movie of favoriteMovies" class="container__lists-item item">     
+            <div class="item__image">
+                <img [src]="getImageUrl(movie.poster_path)"
+                alt="no picture" 
+                class="container__lists-img">
+            </div>                
+            <div class="item__description">
+                <div class="item__description-header">
+                    <h3 class="item__description-header-title">{{movie.title}} ({{movie.release_date | date :'y'}})</h3>
+                    <button class="item__description-header-button" (click)="removeFromFavorites(movie.title)">Delete from favorite</button>
+                </div>
+                <div><span>{{movie.overview}}</span></div>
+            </div>                                                
+        </li>
+    </ul>
+</div>

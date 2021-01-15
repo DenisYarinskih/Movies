@@ -8,10 +8,11 @@ import { CategoriesEnum } from 'src/app/config/enum/categoriesEnum';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
   bufferValue: string;
+  favoriteValue: false;
   categories = CategoriesEnum;
   categoriesDTO = CategoriesDTOEnum;
   onDestroy$ = new Subject<void>();
@@ -34,9 +35,16 @@ export class HeaderComponent implements OnInit{
     this.onDestroy$.next();
     this.onDestroy$.complete();
   }
+
   goToMovieList(category: string): void {
     this.router.navigate(['movies'],{queryParams: {category}})
   }
+
+  goToFavoriteMovies():void {
+    this.router.navigate(['movies','favorite']);
+    this.favoriteValue !== this.favoriteValue
+  }
+
   private getActiveCategory(): void{   
     this.activatedRoute.queryParams
       .pipe(takeUntil(this.onDestroy$))
