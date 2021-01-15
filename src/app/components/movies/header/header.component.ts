@@ -8,7 +8,7 @@ import { CategoriesEnum } from 'src/app/config/enum/categoriesEnum';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
   bufferValue: string;
